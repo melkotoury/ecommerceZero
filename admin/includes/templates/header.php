@@ -8,11 +8,11 @@
 		<title>Admin</title>
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo $css ; ?>bootstrap.min.css">
 
 		<!-- Font Awesome CSS -->
-		<link rel="stylesheet" href="layout/css/font-awesome.min.css">		
+		<link rel="stylesheet" href="<?php echo $css ; ?>font-awesome.min.css">		
 		<!-- Backend CSS -->
-		<link rel="stylesheet" type="text/css" href="layout/css/backend.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo $css ; ?>backend.css">
 	</head>
 	<body>
