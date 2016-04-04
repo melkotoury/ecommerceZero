@@ -1,6 +1,17 @@
 <?php
+include 'connect.php';
 // Routes
 $tpl ='includes/templates/' ; //Templates Directory
 $css = 'layout/css/' ; // CSS Directory
 $js = 'layout/js/'; //JS Directory
+$lang='includes/languages/'; //Languages Directory
+$img='layout/img/';//Images Directory
 
+//include the important files
+
+include $lang.'en.php';
+include $tpl.'header.php' ;
+//Include navbar on all pages except the one with $noNavbar variable
+if(!isset($noNavbar)){
+include $tpl.'navbar.php' ;
+}
