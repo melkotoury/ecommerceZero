@@ -9,12 +9,20 @@
 
 function lang($phrase){
 	static $lang=array(
-			//Dashboard Phrases
-            'HOME_ADMIN'=>'Home',
-            'CATEGORIES'=>'Categories',
-            ''=>'',
-            ''=>'',
-            ''=>''
+			//Dashboard Navbar Phrases
+            'HOME_ADMIN'    =>'Home',
+            'CATEGORIES'    =>'Categories',
+            'ITEMS'         =>'Items',
+            'MEMBERS'       =>'Members',
+            'STATISTICS'    =>'Statistics',
+            'LOGS'          =>'Logs',
+            ''              =>'',
+            ''              =>'',
+            ''              =>'',
+            ''              =>'',
+            ''              =>'',
+            ''              =>''
+            
 		);
 	return $lang[$phrase];
 }
