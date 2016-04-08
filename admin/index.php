@@ -1,6 +1,7 @@
 <?php 
 session_start();
 $noNavbar= '';
+$pageTitle='Login';
 if(isset($_SESSION['userName'])){
 	header('location: dashboard.php');//Redirect to dashboard page if session already exists
 }
