@@ -6,7 +6,6 @@ if(isset($_SESSION['userName'])){
 }
 include 'init.php';
 include $tpl.'header.php';
-include $lang.'en.php';
 
 //check if user comming from http post request
 if($_SERVER['REQUEST_METHOD']=='POST'){
