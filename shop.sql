@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2016 at 03:49 AM
+-- Generation Time: Jun 24, 2016 at 04:43 AM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -38,6 +38,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userID`, `userName`, `password`, `email`, `fullName`, `groupID`, `trustStatus`, `regStatus`) VALUES
+(1, 'melkotoury', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'melkotoury@gmail.com', 'Mahmoud El Kotoury', 1, 0, 1),
+(2, 'kato', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'kato@kato.com', 'Kato Beek', 0, 0, 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -45,7 +53,8 @@ CREATE TABLE `users` (
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userID`);
+  ADD PRIMARY KEY (`userID`),
+  ADD UNIQUE KEY `userName` (`userName`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -55,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
