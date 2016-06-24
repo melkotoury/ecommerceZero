@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $pageTitle='Dashboard';
 
@@ -7,7 +7,8 @@ include 'init.php';
 include $tpl.'footer.php';
 
 } else{
-	
+
 	header('Location:index.php');
+	exit();
 }
 ?>
