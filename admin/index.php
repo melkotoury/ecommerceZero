@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $noNavbar= '';
 $pageTitle='Login';
@@ -26,7 +26,7 @@ $username=$_POST['user'];
 		exit();
 
 	}
-	
+
 }
 ?>
 
@@ -35,9 +35,9 @@ $username=$_POST['user'];
 	<input class="form-control " type="text" name="user" value="" placeholder="Username" autocomplete="off">
 	<input class="form-control " type="password" name="pass" value="" placeholder="Password" autocomplete="new-password">
 	<input class="btn  btn-primary btn-block " type="submit" name="" value="login">
- 	
+
 </form>
-<?php 
+<?php
 include $tpl.'footer.php';
 
 ?>
