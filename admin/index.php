@@ -15,13 +15,15 @@ $username=$_POST['user'];
 	$hashedPass= sha1($password);
 
 	//check if user exist in database
-	$stmt = $con->prepare("SELECT userName, password FROM users WHERE userName = ? AND password = ? AND groupID = 1" );
-	$stmt->execute(array($username ,$hashedPass));
+	$stmt = $con->prepare("SELECT userID,userName, password FROM users WHERE userID=userID AND userName = ? AND password = ? AND groupID = 1" );
+	 $stmt->execute(array($username ,$hashedPass));
+	$row 	=	$stmt->fetch();
 	$count = $stmt->rowCount();
 
 	//Check if count > 0 , this will mean database contain record about this username
 	if($count>0){
 		$_SESSION['userName']=$username;//register session name
+		$_SESSION['ID']	= $row['userID'];
 		header('location: dashboard.php');//redirect to dashboard page
 		exit();
 

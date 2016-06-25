@@ -10,6 +10,7 @@
 session_start();
 if (isset($_SESSION['userName'])) {
   # code...
+  $pageTitle="Members";
   include 'init.php';
 
   // main content for add , edit , delete Members
@@ -22,7 +23,7 @@ if (isset($_SESSION['userName'])) {
 
   }elseif ($do=='Edit') {
     # Edit Page...
-    echo "Welcome to Edit Page";
+    echo "Welcome to Edit Page and you id is ".$_GET['userID'];
   }
   include $tpl. 'footer.php';
 
